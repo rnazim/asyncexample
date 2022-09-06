@@ -62,6 +62,15 @@ public class MainAsync {
 					} catch (InterruptedException e) {
 						System.out.println("Exception Thread asyncChild "+e);
 					}
+            		if(i==9)
+            		{
+            			try {
+							Thread.sleep(2000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+            		}
             		System.out.println("Asynchronous asyncChild Activity "+i+" From asyncParent - "+intAsyncParent+" Loop - "+intAsyncParentLoop);
             	}
   
@@ -95,7 +104,7 @@ public class MainAsync {
     	{
     		intLoop++;
     		try {
-				Thread.sleep(500);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				System.out.println("Interrupted Exception in Synchronous Task "+e);
 			}
@@ -114,14 +123,14 @@ public class MainAsync {
         
         obj.getIntLoop();
         
-        obj.synchronousTask();
-        
-        obj.getIntLoop();
+//        obj.synchronousTask();
+//        
+//        obj.getIntLoop();
 //        obj = new MainAsync();
 //    	mListener = new UsualEvent();
 //        obj.registerAsynchronous(mListener);
 //        obj.asyncParent(2);
-//        
+////        
 //        obj.synchronousTask();
 //        
 //        obj = new MainAsync();
